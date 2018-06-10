@@ -1,7 +1,7 @@
 class profile::base {
 	include ::ssh
 
-	user {'admin':
+	user {'jgoncalves':
 		ensure	=> present,
 	}
 
