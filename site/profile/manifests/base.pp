@@ -1,8 +1,12 @@
 class profile::base {
 	include ::ssh
 
+	
+
 	user {'jgoncalves':
 		ensure	=> present,
+		home 	=> '/home/jeferson',
+		managehome => true,
 	}
 
 	ssh_authorized_key { 'jeferson90goncalves@gmail.com':
