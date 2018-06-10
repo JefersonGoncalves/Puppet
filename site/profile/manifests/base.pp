@@ -1,11 +1,17 @@
 class profile::base {
 	include ::ssh
 
-	
+
+	file { '/home/jgoncalves':
+		ensure => 'directory',
+		owner  => 'jgoncalves',
+		group  => 'jgoncalves',
+		mode   => '0640',
+	}
 
 	user {'jgoncalves':
 		ensure	=> present,
-		home 	=> '/home/jeferson',
+		home 	=> '/home/jgoncalves',
 		managehome => true,
 	}
 
